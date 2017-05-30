@@ -1,0 +1,306 @@
+/* HTML5 Tags
+-----------------------------------------------------------*/
+section, article, header, footer, hgroup, figcaption, figure{display:block}
+
+
+/* Reset
+-----------------------------------------------------------*/
+html,body{height:100%}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, samp, small, strike, strong, sub, sup, tt, var,b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, hr {margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}
+table{border-collapse:collapse;border-spacing:0}/* tables still need 'cellspacing="0"' in the markup */
+ul{list-style:square inside}
+ol{list-style:decimal inside}
+.clear{clear:both;visibility:hidden;width:0;height:0}
+
+img {color: transparent;font-size: 0;vertical-align: middle;
+	/*For IE. http://css-tricks.com/ie-fix-bicubic-scaling-for-images */
+	-ms-interpolation-mode: bicubic}
+input:focus,
+select:focus,
+textarea:focus{
+	outline:none;
+}
+
+/* Typography
+-----------------------------------------------------------*/
+body{
+	font:100%/1.5em sans-serif;
+	color:#222526;
+	vertical-align:baseline;
+	background:#EEE url('../img/bg.png');
+	font-family:'Helvetica', 'Arial', sans-serif
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,ol,dt,dd{margin-top:24px}
+p,ul,ol,dt,dd{font-size:1em}
+
+h1,h2,h3{line-height:48px;font-family:'Geo', 'Helvetica Black', 'Arial Black', sans-serif}
+h4,h5,h6{line-height:24px;font-weight:bold}
+
+h1{font-size:3.50em}
+h2{font-size:2.50em}
+h3{font-size:2.00em}
+h4{font-size:1.50em}
+h5{font-size:1.25em}
+h6{font-size:1em;font-style:italic}
+
+a{color:#1b5475;text-decoration:none}
+	a:hover{text-decoration:underline}
+	a:visited{color:#1b5475}
+
+p+p{text-indent:24px}
+
+ul, ol{margin-left:24px}
+
+dt{font-weight:bold;font-style:italic}
+	dd{margin-left:24px}
+
+blockquote {
+	display:block;
+	margin:24px;
+	font-style:italic;
+	text-indent:24px;
+}
+hr{
+	clear:both;
+	height:1px;
+	border-bottom:1px solid #F9F9F9;
+	background:#999999;
+}
+	/* fixes line-height problems created by these nested elements */
+	p>strong,p>em,p>code{line-height:0}
+
+	/* Makes browsers agree.
+	  IE + Opera = font-weight: bold.
+	  Gecko + WebKit = font-weight: bolder.
+	*/
+	b,strong{font-weight:bolder}
+
+
+/* Grid System
+-----------------------------------------------------------*/
+/* forces width of screen */
+body{min-width:960px}
+
+.wrapper{width:960px;margin:0 auto;}
+
+.col1,.col2,.col3,.col4,.col5,.col6,.col7,.col8,.col9,.col10,.col1,.col12{display:inline;float:left}
+
+	/* 24px margin is too much for narrow columns */
+	.col1,.col2{padding:0 12px} 
+
+	/*larger columns can handle it fine */
+	.col3,.col4,.col5,.col6,.col7,.col8,.col9,.col10,.col1,.col12{padding:0 24px} 
+	
+	/* width vary depending on the margins total widths are multiples of 80 */
+	.col1{width:56px}
+	.col2{width:136px}
+	.col3{width:192px}
+	.col4{width:272px}
+	.col5{width:352px}
+	.col6{width:432px}
+	.col7{width:512px}
+	.col8{width:592px}
+	.col9{width:672px}
+	.col10{width:752px}
+	.col11{width:832px}
+	.col12{width:912px}
+	
+	.alpha{clear:left}
+	.omega{clear:right}
+	
+	.clear {
+		clear:both;
+		display:block;
+		overflow:hidden;
+		visibility:hidden;
+		width:0;
+		height:0;
+	}
+	/* Clear floated elements */
+	.clearfix:before,.clearfix:after {
+		content:".";
+		display:block;
+		height:0; 
+		overflow:hidden;
+	}
+	.clearfix:after{clear:both}
+	.clearfix{zoom:1} /* IE 5.5/6/7 */
+
+/* Layout
+-----------------------------------------------------------*/
+.outWrap{min-height:100%;}			/*fills screen*/
+.inWrap{position:relative}		/*positions content*/
+
+header{
+	height:115px;
+	padding-top:1px;
+	background:#222526;
+	color:#EEE;
+	font-family: 'Geo', sans-serif;
+	border-bottom:2px solid #1D2021;
+}
+	.headerLinks{
+		display:block;
+	}
+	.headerLinks a{color:#97BCD1;text-decoration:none}
+		.headerLinks a:hover{text-decoration:underline}
+		.headerLinks a:visited{color:#97BCD1}
+
+.cpIndexBody{
+	border-top:2px solid #FFF;
+}
+.cpForm{
+	display:block;
+	width:960px;
+	margin-top:12px;
+}
+.cpFormItem{
+	float:left;
+	width:400px;
+	height:60px;
+	margin:12px 20px;
+	float:left;
+	line-height:60px;
+}
+	.cpFormItemName{
+		float:left;
+		width:120px;
+		margin:0 2px;
+		font-size:24px;
+		text-align:right;
+		height:60px;
+		line-height:60px;
+		font-family: 'Geo', sans-serif;
+	}
+
+.cpInNam{
+	float:left;
+	display:block;
+	width:236px;
+	height:20px;
+	margin:15px 0;
+	padding:5px 0 5px 10px;
+	border:0;
+	line-height:20px;
+	background:#222526;
+	color:#EEE;
+}
+.cpInExp,
+.cpInDis,
+.cpInLan{
+	float:left;
+	display:block;
+	width:246px;
+	height:30px;
+	margin:15px 0;
+	*margin:20px 0 0;
+	padding:5px 3px 5px 10px;
+	border:0;
+	line-height:30px;
+	background:#222526;
+	color:#EEE;
+}
+.cpFormText{
+	display:block;
+	width:800px;
+	margin:0 auto;
+	line-height:60px;
+}
+	.cpPasteHere{
+		display:block;
+		width:100%;
+		text-align:center;
+		height:60px;
+		line-height:60px;
+		font-size:24px;
+		font-family: 'Geo', sans-serif;
+	}
+	.cpPasteInfo{
+		display:block;
+		width:100%;
+		text-align:center;
+		height:60px;
+		line-height:60px;
+		font-size:16px;
+		font-family: 'Geo', sans-serif;
+	}
+	.cpInTex, .cpViewText{
+		display:block;
+
+		width:776px;
+		max-width:776px;
+		min-height:48px;
+		padding:12px;
+		margin:0 0 24px;
+		border:0;
+
+		background:#222526 url('../img/text_bg.png') 0 12px;
+
+		color:#EEE;
+		line-height:24px;
+
+		-webkit-border-radius:12px;
+		-moz-border-radius:12px;
+		border-radius:12px;
+	}
+		.cpViewText{background:#212526}
+			.highlighttable tr:nth-child(odd){background:#212526}
+			.highlighttable tr:nth-child(even){background:#242829}
+
+.cpFormSubmit, .cpFormEdit{
+	width:800px;
+	margin:24px auto;
+}
+	.cpInSub, .cpInEdi{
+		height:30px;
+		margin:0;
+		border:0;
+		background:0;
+		float:right;
+		font-size:30px;
+		font-family:'Geo', sans-serif;
+		-webkit-transition:all .5s ease-in-out;
+		-moz-transition:all .5s ease-in-out;
+		-o-transition:all .5s ease-in-out;
+		transition:all .5s ease-in-out;
+	}
+		.cpInSub:hover, .cpInEdi:hover{
+			color:#999;
+			-webkit-transition:all .5s ease-in-out;
+			-moz-transition:all .5s ease-in-out;
+			-o-transition:all .5s ease-in-out;
+			transition:all .5s ease-in-out;
+		}
+
+.fnotes{
+	text-align:center;
+	font-family: 'Geo', sans-serif;
+	margin:0;
+}
+
+pre{
+	margin-left: 15px;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap !important;
+	word-wrap: break-word;
+}
+.e404{
+	font-size:9.6em;
+	text-align:center;
+	line-height:148px;
+}
+.e404p{
+	font-family:'Geo', sans-serif;
+	font-size:1.6em;
+	line-height:24px;
+	text-indent:0;
+	text-align:center;
+}
+.e404pem{
+	font-size:1.0em;
+	font-style:italic;
+	line-height:24px;
+	text-indent:0;
+	text-align:center;
+}

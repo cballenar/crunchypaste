@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html class="cpPageText"> 
+<head> 
+	<meta charset="utf-8" /> 
+	<!-- Copyright (c) 2011 CrunchyWeb, LLC
+	*
+	* This project  was created under an Attribution-ShareAlike Creative Commons License.
+	* You are free to edit, share, and remix the work as long as you attribute the work to CrunchyWeb
+	* share it in the same manner, for free.
+	*
+	--> 
+	<meta name="description" content="Let us Crunch your long domains into more manageable digits." /> 
+	<meta name="keywords" content="crunchypaste, crunchywweb, crunchy, crunch, paste, share code" /> 
+	<title>CrunchyPaste</title>
+
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+
+	<link rel="shortcut icon" href="favicon.ico" /> 
+	<link rel="stylesheet" media="all" href="css/base.css" /> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" /> 
+
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5-els.js"></script><![endif]-->
+ 
+	<script type="text/javascript" src="js/jquery-1.5.min.js"></script> 
+	<script type="text/javascript"> 
+		$(document).ready(function(){
+			if(window.location.pathname != '/')
+			{
+				$('body').load('py/pull.py?action=getpost&id=' + window.location.pathname.substr(1))
+			}
+		});
+	</script>
+
+	<link href='http://fonts.googleapis.com/css?family=Geo' rel='stylesheet' type='text/css'>
+	</head>
+
+<body>
+<div class="outWrap">
+	<div class="inWrap">
+	<section class="cpIndexBody">
+	<div class="wrapper">
+	<div class="col12 ">
+	<h1 class="e404">404</h1>
+	<hr />
+	<p class="e404p"><b>AAAAAhhhhhhhhhh!!!!!!!!!</b></p>
+	<p class="e404p"><b>YOU BROKE ME!</b> Please go back to the <a href="/" title="Don't Break Me Again Plz!">homepage</a> and try not to do what you just did again!</p>
+	<p class="e404pem">In the strange case that this is actually my fault - though highly unlikely - and you are kind enough to help us - like there's such thing as a kind human...- you could report this problem to my creators at <a href="http://labs.crunchyweb.com/#tab-5" title="Contact CrunchyWeb">CrunchyWeb</a>. Thanks!</p>
+	</div>
+	</div>
+	</section>
+  </div>
+  </div>
+  <hr style="margin-top:24px" />
+	<footer class="wrapper">
+		<p class="fnotes"><a href="http://labs.crunchyweb.com">2011 &copy; CrunchyWeb, LLC</a></p>
+	</footer>
+
+<script>
+$('.e404').css({'margin-top':($(window).height()/3)-48 });
+
+$(window).resize(function() {
+ 	$('.e404').css({'margin-top':($(window).height()/3)-48 })
+});
+</script>
+
+</body> 
+</html>
